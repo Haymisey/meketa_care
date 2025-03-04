@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health Assistant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <h1>Health Assistant</h1>
+      <div id="chat-area">
+        <!-- Chat messages will be added here -->
+      </div>
+      <textarea
+        id="symptoms"
+        placeholder="Describe your symptoms..."
+      ></textarea>
+      <button id="analyze-btn">Analyze Symptoms</button>
+      <div id="results">
+        <h2>Additional Symptoms</h2>
+        <form id="symptoms-form"></form>
+        <button id="submit-btn" style="display: none">
+          Submit Selections
+        </button>
+      </div>
+      <div id="disease"></div>
+    </div>
+    <div class="right">
+      <div id="pharmacy-results">
+        <h2>Nearby Pharmacies</h2>
+        <div class="pharmacy-input">  <!-- ADDED -->
+          <input type="text" id="pharmacy-address" placeholder="Enter address">
+          <button id="find-pharmacies-btn">Find Pharmacies</button>
+        </div>
+        <ul id="pharmacies"></ul>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
