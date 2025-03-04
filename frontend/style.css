@@ -1,0 +1,182 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  min-height: 100vh; /* Ensure the body takes up at least the full viewport height */
+}
+
+.container {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 80%; /* Take up most of the screen */
+  max-width: 1200px; /* But don't get too wide */
+  display: flex; /* Make container a flexbox */
+  flex-direction: row; /* Arrange children in a row */
+  min-height: 80vh; /* Ensure the container takes up a decent amount of height */
+}
+
+/* Left Side (Chatbot) */
+.left {
+  flex: 2; /* Takes up more space */
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* Stack the elements vertically */
+}
+
+.left h1 {
+  margin-top: 0; /* Remove default top margin */
+}
+
+#chat-area {
+  flex: 1; /* Allow the chat area to grow and take up available space */
+  overflow-y: auto; /* Enable scrolling if the content overflows */
+  margin-bottom: 10px;
+}
+
+/* Style for the user input box */
+.user-message {
+  background: #007bff;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  text-align: right;
+  word-break: break-word; /* Prevent long words/strings from overflowing */
+}
+
+/* Style for the bot response box */
+.bot-message {
+  background: #f1f1f1;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  text-align: left;
+  word-break: break-word; /* Prevent long words/strings from overflowing */
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  resize: vertical; /* Allow vertical resizing */
+}
+
+#analyze-btn {
+  padding: 10px 20px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-bottom: 10px;
+}
+
+#analyze-btn:hover {
+  background: #0056b3;
+}
+
+#results {
+  margin-top: 20px;
+  text-align: left;
+}
+
+#symptoms-form {
+  margin-bottom: 10px;
+}
+
+.symptom-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.symptom-item input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+#submit-btn {
+  padding: 10px 20px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  display: none; /* Initially hidden */
+  margin-top: 10px;
+}
+
+#submit-btn:hover {
+  background: #1e7e34;
+}
+
+#disease {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Right Side (Pharmacy List) */
+.right {
+  flex: 1; /* Takes up remaining space */
+  padding: 20px;
+  overflow-y: auto; /* Enable vertical scrolling */
+  border-left: 1px solid #ccc; /* Separate left and right */
+}
+
+#pharmacy-results {
+  margin-top: 0; /* Removing default top margin */
+  text-align: left;
+}
+
+#pharmacies {
+  list-style-type: none;
+  padding: 0;
+}
+
+#pharmacies li {
+  background: #f1f1f1;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.pharmacy-input {
+  /* ADDED */
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.pharmacy-input input[type="text"] {
+  /* ADDED */
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+
+.pharmacy-input button {
+  /* ADDED */
+  padding: 8px 12px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.pharmacy-input button:hover {
+  /* ADDED */
+  background: #0056b3;
+}
